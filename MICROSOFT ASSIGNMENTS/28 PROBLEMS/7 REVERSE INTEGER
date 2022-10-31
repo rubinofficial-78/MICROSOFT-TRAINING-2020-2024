@@ -1,0 +1,16 @@
+class Solution {
+    public int reverse(int x) {
+        long rem = 0;
+        while(x != 0){
+            long ut = x%10;
+            rem = rem * 10 + ut;
+            x /= 10;
+        }
+        if(rem >= Integer.MIN_VALUE && rem <= Integer.MAX_VALUE){
+            return (int)rem;
+        }
+        else{
+            return 0;
+        }
+    }
+}
